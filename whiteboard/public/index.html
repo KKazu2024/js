@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/whiteboard.css" rel="stylesheet">
+    <title>Whiteboard</title>
+</head>
+
+<header>
+    <div class="img">
+    <img src="images/icon_mtgate2.png" alt="MTGate">
+    </div>
+</header>
+<body>
+    <div id="toolbar">
+        <button class="button" id="pen-button"></button>
+        <button class="button" id="eraser-button"></button>
+        <button class="button" id="add-sticky-note-button"></button>
+        <button class="button" id="clear-button"></button>
+    </div>
+    <!-- <div id="sticky-note-container"></div> -->
+    <canvas id="whiteboard"></canvas>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/whiteboard.js"></script>
+</body>
+</html>

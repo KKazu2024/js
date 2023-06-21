@@ -1,0 +1,182 @@
+/* bodyスタイル */
+html,
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
+
+textarea {
+  /* border: solid 1px black; */
+  width: 196px;
+  height: 196px;
+  resize: none;
+  overflow: hidden;
+}
+
+/* ヘッダー */
+header {
+  position: fixed;
+  width: 100%;
+  background-color: aquamarine;
+  border-bottom: solid 2px gainsboro;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  margin: 18px 50px 20px 40px;
+}
+
+/* メイン */
+#whiteboard {
+  /* margin-top: auto; */
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid gray; */
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sticky-note {
+  position: fixed;
+  /* background-color: rgb(127, 255, 212); */
+  width: 200px;
+  height: 200px;
+  border: none;
+  resize: none;
+  padding: 10px;
+  cursor: move;
+  filter: drop-shadow(6px 6px 6px rgba(40, 40, 40, 0.6));
+  /* border-radius: 10px; */
+}
+
+/* ツールバー */
+#toolbar {
+  border-top: solid 2px gray;
+  border-right: solid 2px gray;
+  border-bottom: solid 2px gray;
+  border-radius: 0 30px 30px 0;
+  margin-top: 320px;
+  padding: 20px 10px 20px 10px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+#toolbar #pen-button {
+  background-image: url('/images/pen_note_icon_2.png');
+  /* background-size: cover; またはcontainなど適切な値を指定 */
+  background-position: center center; /* または適切な値を指定 */
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 50px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+#toolbar #eraser-button {
+  background-image: url('/images/eraser_icon_1.png');
+  background-position: center center; /* または適切な値を指定 */
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 50px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+#toolbar #add-sticky-note-button {
+  background-image: url('/images/ei-sticky-1.png');
+  background-position: center center; /* または適切な値を指定 */
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 50px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+#toolbar #clear-button {
+  background-image: url('/images/delete_1.png');
+  background-position: center center; /* または適切な値を指定 */
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 50px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* 削除ボタン */
+.delete-button {
+  position: absolute;
+  border-radius: 10px;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  background-color: gray;
+  border: none;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* 疑似要素を追加 */
+.delete-button::before {
+  content: 'X';
+  display: block;
+  line-height: 20px;
+}
+
+/* 削除ボタンが押されたときのスタイルを追加 */
+.delete-button:active::before {
+  opacity: 0.5;
+}
+
